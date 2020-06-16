@@ -1,11 +1,9 @@
-# frozen_string_literal: true
-
 class EventsController < ApplicationController
   before_action :current_user
   def index
     @events = Event.all
-    @eventsPast = Event.previously
-    @eventsPrevious = Event.upcoming
+    @events_past = Event.previously
+    @events_previous = Event.upcoming
   end
 
   def show

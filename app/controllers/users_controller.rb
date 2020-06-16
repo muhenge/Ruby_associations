@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :current_user, except: %i[new create]
   def new
-  @user = User.new
+    @user = User.new
   end
 
   def create
@@ -18,10 +18,11 @@ class UsersController < ApplicationController
 
   def show
     @events = current_user.events
-    @eventsAttended = current_user.attend
+    @events_attended = current_user.attend
   end
 
   private
+
   def user_params
     params.require(:user).permit(:username)
   end

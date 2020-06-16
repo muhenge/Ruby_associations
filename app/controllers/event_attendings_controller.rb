@@ -5,18 +5,15 @@ class EventAttendingsController < ApplicationController
   end
 
   def attend
-    eventAttend = EventAttending.new
-    @event = Event.find(params["format"])
-    eventAttend =  current_user.event_attending.build
-    eventAttend.event =  @event
+    @event = Event.find(params['format'])
+    event_attend = current_user.event_attending.build
+    event_attend.event = @event
     if !EventAttending.where(user_id: current_user.id, event_id: @event.id).first
-      eventAttend.save
+      event_attend.save
       flash.notice = "Attended successfuly the event #{@event.description}"
-      redirect_to event_attendings_index_path
     else
       flash.notice = "The event #{@event.description} is already Attended by you "
-      redirect_to event_attendings_index_path
     end
-
+    redirect_to event_attendings_index_path
   end
 end

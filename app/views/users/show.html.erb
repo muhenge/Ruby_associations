@@ -9,7 +9,7 @@
 
 <h1>All events attended by: <%= session[:auth]["username"] %></h1>
 <ul>
-  <% @eventsAttended.each do |event| %>
+  <% @events_attended.each do |event| %>
     <li>
       <%= event.description %>
     </li>
@@ -22,7 +22,7 @@
    <th>Date</th>
    <th>Status</th>
  </tr>
- <% @eventsAttended.each do |event| %>
+ <% @events_attended.each do |event| %>
   <tr>
     <td> <%= event.description %></td>
     <td> <%= event.date %></td>
