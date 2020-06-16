@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :current_user, except: %i[new create]
   def new
   @user = User.new
   end
@@ -7,6 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash.notice = 'User created'
+      session[:auth] = @user
       redirect_to new_user_path
     else
       flash.notice = 'User not created'
@@ -15,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    
+    @events = current_user.events
   end
 
   private

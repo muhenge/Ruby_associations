@@ -1,0 +1,15 @@
+<h1>All Events</h1>
+
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      Description: <%=event.description%>
+      <%= form_tag event_attendings_attend_path(event.id), method: "put" do %>
+      <p>
+        <%= submit_tag("Attend") %>
+
+      </p>
+    <% end %>
+    </li>
+  <% end %>
+</ul>

@@ -13,8 +13,15 @@
     <% if session[:auth] %>
       <h3>Welcome: <%= session[:auth]["username"] %> </h3>
       <h3><%= link_to "Logout", destroy_session_path, data:{method: :delete} %> </h3>
+      <h3> Event link</h3>
+      <%= link_to "Index", events_path %> || <%= link_to "New", new_event_path %>
+      <h3>User Link</h3>
+      <%= link_to "Show page", user_path(session[:auth]["id"]) %>
+      <h3>To attend Events</h3>
+      <%= link_to "List of events", event_attendings_index_path %>
     <% else %>
       <h3><%= link_to "Login", new_session_path %> </h3>
+      <h3><%= link_to "New user", new_user_path %> </h3>
     <% end %>
     <p class="notice"><%= flash.notice %></p>
     <%= yield %>

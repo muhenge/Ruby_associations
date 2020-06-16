@@ -1,3 +1,8 @@
-<h1><%=  %></h1>
-<p><%=  %></p>
-<%= link_to "<< Back to Articles List", articles_path %>
+<h1>All events created by: <%= session[:auth]["username"] %></h1>
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <%= event.description %>
+    </li>
+  <% end %>
+</ul>

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class EventsController < ApplicationController
+  before_action :current_user
   def index
     @events = Event.all
   end
@@ -10,19 +11,22 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new.build
+    @event = current_user.events.build
   end
 
   def create
-    @event = Event.new.build(event_params)
-    @event.save
-
-    redirect_to event_path(@event)
+    @event = current_user.events.build(event_params)
+    if @event.save
+      flash.notice = 'Event created'
+      redirect_to events_path
+    else
+      render 'new'
+    end
   end
 
   private
 
-  def article_params
+  def event_params
     params.require(:event).permit(:description)
-    end
+  end
 end
