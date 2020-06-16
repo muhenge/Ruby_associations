@@ -21,8 +21,7 @@ ActiveRecord::Schema.define(version: 2020_06_16_171729) do
 
   create_table "events", force: :cascade do |t|
     t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.date "date"
     t.integer "creator_id"
     t.index ["creator_id"], name: "index_events_on_creator_id"
   end

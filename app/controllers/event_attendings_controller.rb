@@ -7,7 +7,7 @@ class EventAttendingsController < ApplicationController
   def attend
     eventAttend = EventAttending.new
     @event = Event.find(params["format"])
-    eventAttend =  current_user.event_attendings.build
+    eventAttend =  current_user.event_attending.build
     eventAttend.event =  @event
     if !EventAttending.where(user_id: current_user.id, event_id: @event.id).first
       eventAttend.save

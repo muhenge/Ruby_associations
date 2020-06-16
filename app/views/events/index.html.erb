@@ -3,7 +3,27 @@
 <ul>
   <% @events.each do |event| %>
     <li>
-      <%= link_to event.description, event_path(event) %>
+      Descritpion: <%= link_to event.description, event_path(event) %>---Date: <%= link_to event.date, event_path(event) %>
+    </li>
+  <% end %>
+</ul>
+
+<h1>All Past events</h1>
+
+<ul>
+  <% @eventsPast.each do |event| %>
+    <li>
+      Descritpion: <%= link_to event.description, event_path(event) %>---Date: <%= link_to event.date, event_path(event) %>
+    </li>
+  <% end %>
+</ul>
+
+<h1>All Previous events</h1>
+
+<ul>
+  <% @eventsPrevious.each do |event| %>
+    <li>
+      Descritpion: <%= link_to event.description, event_path(event) %>---Date: <%= link_to event.date, event_path(event) %>
     </li>
   <% end %>
 </ul>
