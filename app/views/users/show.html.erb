@@ -34,3 +34,37 @@
   </tr>
  <% end %>
 </table>
+
+<h1>All Past events attended by: <%= session[:auth]["username"] %></h1>
+
+<table>
+ <tr>
+   <th>Description</th>
+   <th>Date</th>
+   <th>Status</th>
+ </tr>
+ <% @events_past_at.each do |event| %>
+  <tr>
+    <td> <%= event.description %></td>
+    <td> <%= event.date %></td>
+    <td> Past events </td>
+  </tr>
+ <% end %>
+</table>
+
+<h1>All Upcoming events will be attended by: <%= session[:auth]["username"] %></h1>
+
+<table>
+ <tr>
+   <th>Description</th>
+   <th>Date</th>
+   <th>Status</th>
+ </tr>
+ <% @events_upcoming_at.each do |event| %>
+  <tr>
+    <td> <%= event.description %></td>
+    <td> <%= event.date %></td>
+    <td> Upcoming events </td>
+  </tr>
+ <% end %>
+</table>
