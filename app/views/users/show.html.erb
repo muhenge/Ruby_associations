@@ -16,25 +16,6 @@
   <% end %>
 </ul>
 
-<table>
- <tr>
-   <th>Description</th>
-   <th>Date</th>
-   <th>Status</th>
- </tr>
- <% @events_attended.each do |event| %>
-  <tr>
-    <td> <%= event.description %></td>
-    <td> <%= event.date %></td>
-    <% if event.date < Date.today %>
-     <td> Previously attended events </td>
-    <% else %>
-      <td> Upcoming events </td>
-    <% end %>
-  </tr>
- <% end %>
-</table>
-
 <h1>All Past events attended by: <%= session[:auth]["username"] %></h1>
 
 <table>
