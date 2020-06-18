@@ -18,14 +18,26 @@
   <body>
     <div class="container">
     <% if session[:auth] %>
-      <%= link_to "Event Index", events_path %> || <%= link_to "New Event", new_event_path %>
-    || <%= link_to "User Show page", user_path(session[:auth]["id"]) %>
-    || <%= link_to "List of events", event_attendings_index_path %>
-      <h3><%= link_to "Logout", destroy_session_path, data:{method: :delete} %> </h3>
+    <nav>
+      <div class="nav-wrapper">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><%= link_to "Event Index", events_path %> </li>
+       <li><%= link_to "New Event", new_event_path %></li>
+    <li><%= link_to "User Show page", user_path(session[:auth]["id"]) %></li>
+     <li><%= link_to "List of events", event_attendings_index_path %></li>
+     </ul>
+           <p><%= link_to "Logout", destroy_session_path, data:{method: :delete} %> </p>
+
+           </div>
+    </nav>
+      
+      
       <h3>Welcome: <%= session[:auth]["username"] %> </h3>
+
     <% else %>
       <h3><%= link_to "Login", new_session_path %> </h3>
       <h3><%= link_to "New user", new_user_path %> </h3>
+
     <% end %>
     <p class="notice"><%= flash.notice %></p>
     <%= yield %>

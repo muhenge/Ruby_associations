@@ -7,7 +7,7 @@
   <% end %>
 </ul>
 
-<h1>All events attended by: <%= session[:auth]["username"] %></h1>
+<h6>All events attended by: <%= session[:auth]["username"] %></h6>
 <ul>
   <% @events_attended.each do |event| %>
     <li>
@@ -16,7 +16,7 @@
   <% end %>
 </ul>
 
-<h1>All Past events attended by: <%= session[:auth]["username"] %></h1>
+<h6>All Past events attended by: <%= session[:auth]["username"] %></h6>
 
 <table>
  <tr>
@@ -33,7 +33,7 @@
  <% end %>
 </table>
 
-<h1>All Upcoming events will be attended by: <%= session[:auth]["username"] %></h1>
+<h6>All Upcoming events will be attended by: <%= session[:auth]["username"] %></h6>
 
 <table>
  <tr>
