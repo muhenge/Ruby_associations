@@ -14,7 +14,6 @@
 ## About The Project
 
 In this project we built ActiveRecord’s associations, it is an event creator app using rails associations features.
-This app is not styled yet.
 <!-- INSTALLATION -->
 ## Installation
 
@@ -25,6 +24,12 @@ You need to have this app and tools to start:
 * cd to the cloned folder and open with the terminal and run ```bundle install```
 * After installing all the [gems](https://rubygems.org/) run ```rails db:migrate``` which will execute all the generated migrations.
 * Then type ```rails server``` in the terminal and open the browser go to  [http://localhost:3000](http://localhost:3000)
+
+#### Test unit
+
+ Open the project folder with the terminal and run ```bundle exec rspec```
+
+
 
 ### Built With
 
