@@ -1,9 +1,10 @@
 example_id                       | status | run_time        |
 -------------------------------- | ------ | --------------- |
-./spec/event_spec.rb[1:1]        | passed | 0.40427 seconds |
-./spec/login_spec.rb[1:1]        | passed | 0.02964 seconds |
-./spec/login_spec.rb[1:2]        | passed | 0.0302 seconds  |
-./spec/user_spec.rb[1:1:1]       | passed | 0.01052 seconds |
-./spec/user_spec.rb[1:1:2]       | passed | 0.01041 seconds |
-./spec/user_spec.rb[1:2:1]       | passed | 0.00787 seconds |
-./spec/validation_spec.rb[1:1:1] | passed | 0.00752 seconds |
+./spec/event_spec.rb[1:1]        | passed | 7.09 seconds    |
+./spec/login_spec.rb[1:1]        | passed | 0.02493 seconds |
+./spec/login_spec.rb[1:2]        | passed | 0.03271 seconds |
+./spec/user_spec.rb[1:1:1]       | passed | 4.21 seconds    |
+./spec/user_spec.rb[1:1:2]       | passed | 0.05235 seconds |
+./spec/user_spec.rb[1:2:1]       | passed | 0.06566 seconds |
+./spec/validation_spec.rb[1:1:1] | passed | 0.00617 seconds |
+./spec/validation_spec.rb[1:2:1] | passed | 0.00397 seconds |

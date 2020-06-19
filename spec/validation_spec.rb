@@ -11,9 +11,9 @@ RSpec.describe Event, type: :model do
     end
     context 'Event date is always present' do
         it 'is invalid without date input' do
-            event = Event.new(description: nil)
+            event = Event.new(date: nil)
             event.valid?
-            expect(event.errors[:description]).to include("can't be blank")
+            expect(event.errors[:date]).to include("can't be blank")
         end
     end
 
