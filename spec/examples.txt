@@ -1,0 +1,11 @@
+example_id                       | status | run_time        |
+-------------------------------- | ------ | --------------- |
+./spec/associations_spec.rb[1:1] | passed | 0.15817 seconds |
+./spec/event_spec.rb[1:1]        | passed | 2.63 seconds    |
+./spec/login_spec.rb[1:1]        | passed | 0.0496 seconds  |
+./spec/login_spec.rb[1:2]        | passed | 0.04101 seconds |
+./spec/user_spec.rb[1:1:1]       | passed | 0.03548 seconds |
+./spec/user_spec.rb[1:1:2]       | passed | 0.01318 seconds |
+./spec/user_spec.rb[1:2:1]       | passed | 0.04253 seconds |
+./spec/validation_spec.rb[1:1:1] | passed | 0.0097 seconds  |
+./spec/validation_spec.rb[1:2:1] | passed | 0.00901 seconds |

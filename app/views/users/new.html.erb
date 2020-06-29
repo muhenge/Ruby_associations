@@ -1,0 +1,15 @@
+<% if @user.errors.any? %>
+  <div>
+    <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<h3><%= @user.username%></h3>
+<%= form_for @user do |p| %>
+    <%= p.label :Username %><br><br>
+    <%= p.text_field :username %><br><br>
+    <%= p.submit class:'waves-effect waves-light btn'%>
+<% end %>

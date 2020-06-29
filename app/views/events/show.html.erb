@@ -1,0 +1,12 @@
+<h4><%= @event.description %></h4>
+<p> Creator: <%= @event.creator.username %></p>
+
+<h4>List of attendees</h4>
+
+<ul>
+  <% @event.attendees.each do |e| %>
+    <li>
+      <%= e.username %>
+    </li>
+  <% end %>
+</ul>

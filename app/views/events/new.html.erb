@@ -1,0 +1,20 @@
+<% if @event.errors.any? %>
+  <div>
+    <ul>
+    <% @event.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_for(@event) do |f| %>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %><br />
+    <%= f.label :date %><br />
+    <%= f.date_field :date %>
+  </p>
+  <p>
+    <%= f.submit class:'waves-effect waves-light btn'%>
+  </p>
+<% end %>
